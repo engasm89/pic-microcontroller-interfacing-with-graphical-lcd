@@ -1,20 +1,16 @@
-# GLCD — Wiring Diagram
+# Pic Microcontroller Interfacing With Graphical Lcd — Circuit Notes
 
-- Course: PIC Microcontroller Interfacing with Graphical LCD
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/glcd-graphical-liquid-crystal-display-pic-microcontroller-interfacing/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the PIC Microcontroller board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- Data/command lines to PIC GPIO; contrast/power per datasheet.
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
-PIC GPIO -> GLCD D0..D7, RS, RW, E
-VCC/GND/Contrast
-```
-
-## Purchase With Discount
-
-Get a discounted price and render graphics — use the link above.
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.
